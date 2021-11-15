@@ -107,83 +107,87 @@
                     </td>
                   <td width="24"></td> <!-- trắng -->
                     <td width="560" valign="top"><!-- InstanceBeginEditable name="content" -->
-					<form action="" method="post">
-            <table border="0">
+					<form action="xl_lab4_bai2.php" method="post" enctype="multipart/form-data" >
+            <table border="0" width="100%">
               <tr>
-                <td colspan="3" align="center">ĐĂNG KÍ THÀNH VIÊN</td>
+                <td colspan="3" align="center">THÊM SẢN PHẨM MỚI</td>
               </tr>
               <tr>
-                <td width="30%">Tên đăng nhập</td>
-                <td colspan="2"><input type="text" size="30"></td>
+                <td width="30%">Mã sản phẩm</td>
+                <td colspan="2" ><input type="text" name="nmProID" size="30"></td>
               </tr>
               <tr>
-                <td>Mật khẩu</td>
-                <td><input type="text" size="30"></td>
+                <td>Tên sản phẩm</td>
+                <td colspan="2" ><input type="text" name="nmProName" size="30" ></td>
               </tr>
               <tr>
-                <td colspan="3"><hr></td>
+                <td >Hình ảnh</td>
+                <td colspan="2" ><input type="file" name="nmProImg" multiple></td>
               </tr>
               <tr>
-                <td colspan="3">THÔNG TIN CÁ NHÂN</td>
+                <td>Loại sản phẩm</td>
+                <td colspan="2"><select name="nmCat" size="1">
+                  <option> Điện thoại di động</option>
+                  <option>Máy tính bảng</option>
+                  <option>laptop</option>
+                  <option>Tivi</option>
+                  <option>Ampli</option>
+                  <option>Loa</option>
+                </select></td>
               </tr>
               <tr>
-                <td>Họ tên</td>
-                <td colspan="2"><input type="text" size="50"></td>
+                <td>Hãng sản xuất</td>
+                <td colspan="2"><select name="nmMan" size="1">
+                  <option> Nokia </option>
+                  <option>Apple</option>
+                  <option>Samsung</option>
+                  <option>LG</option>
+                  <option>Sharp</option>
+                  <option>Toshiba</option>
+              </select></td>
               </tr>
               <tr>
-                <td>Ngày sinh</td>
-                <td colspan="2"><input type="date" size="20"></td>
+                <td>Kich thước</td>
+                <td colspan="2"><span>W:<input type="text" name="nmW" size="2"> H:<input type="text" name="nmH" size="2">D:<input type="text" name="nmD"size="2">mm</span></td>
               </tr>
               <tr>
-                <td>Giới tính</td>
-                <td colspan="2"><input type="radio" name="gt">Nam<br><input type="radio" name="gt">Nữ</td>
+                <td>Trọng lượng</td>
+                <td colspan="2"><input type="text" name="nmWeight" size="5"></td>
               </tr>
               <tr>
-                <td>Địa chỉ email</td>
-                <td colspan="2"><input type="text" size="50"></td>
+                <td width="25%">Giá</td>
+                <td width="30%"><input type="text" name="nmPrice" size="5"></td>
+                <td width="45%">Màu:<input type="color" name="nmColor" size="3"></td>
+                
               </tr>
               <tr>
-                <td>Hình đại diện</td>
-                <td colspan="2"><input type="file" name="img" multiple></td>
+                <td>Hệ điều hành</td>
+                <td colspan="2"><input list="hedieuhanh" name="nmOS" placeholder="">
+                  <datalist id="hedieuhanh" name="nmOS">
+                    <option value="Không có">
+                    <option value="iOS">
+                    <option value="Android">
+                    <option value="Blackberry">
+                  </datalist></td>
               </tr>
               <tr>
-                <td>Địa chỉ</td>
-                <td colspan="2"><input type="text" size="50"></td>
-              </tr>
-              <tr>
-                <td>Điện thoại</td>
-                <td colspan="2"><input type="text" size="50"></td>
-              </tr>
-              <tr>
-                <td>Câu hỏi bí mật</td>
-                <td >
-                  <input list="browsers" name="" placeholder="Chọn câu hổi bí mật">
-                  <datalist id="browsers">
-                    <option value="Ngôi trường đầu tiên của bạn là gì"></option>
-                    <option value="Con vật bạn yêu thích là gì"></option>
-                    <option value="Quê bạn ở đâu"></option>
-                    <option value="Tên người bạn thân nhất là gì"></option>
-                  </datalist>
-                </td>
-              </tr>
-              <tr>
-                <td>Trả lời</td>
-                <td colspan="2"><input type="text" size="50"></td>
-              </tr>
-              <tr>
-                  <td width="35%">Bạn đang quan tâm đến nhóm sản phẩm nào?</td>
-                  <td width="32.5%">
-                    <input type="checkbox" name="dt">Điện thoại<br>
-                    <input type="checkbox" name="dt">Tablet<br>
-                    <input type="checkbox" name="dt">Vi tính
+                  <td >Chức năng</td>
+                  <td >
+                    <input type="checkbox" name="nmFunction[]" value="Nghe nhạc">Nghe nhạc<br>
+                    <input type="checkbox" name="nmFunction[]" value="Chụp hình">Chụp hình<br>
+                    <input type="checkbox" name="nmFunction[]" value="Quay phim">Quay phim
                   </td>
-                  <td width="32.5%"><input type="checkbox" name="dt">Máy ảnh-quay phim<br>
-                    <input type="checkbox" name="dt">Điện tử<br>
-                    <input type="checkbox" name="dt">Gia dụng
+                  <td ><input type="checkbox" name="nmFunction[]" value="Bluetooth">Bluetooth<br>
+                    <input type="checkbox" name="nmFunction[]" value="Wi-Fi">Wi-Fi<br>
+                    <input type="checkbox" name="nmFunction[]" value="3G">3G
                   </td>
               </tr>
-              <tr align="center" height="60">
-                <td colspan="3"><input type="submit" value="Đăng ký">
+              <tr>
+                <td>Mô tả chi tiết</td>
+                <td colspan="2"><textarea name="nmProDet" rows="10" cols="35"></textarea></td>
+              </tr>
+              <tr align="center" height="60" >
+                <td colspan="3"><input type="submit" value="Thêm">
                   <input type="button" value="Xóa">
                 </td>
               </tr>
