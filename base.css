@@ -1,0 +1,27 @@
+:root{
+    --white-color:#fff;
+    --black-color:#000;
+    --text-color:#787878;
+    --aqua-color:#5ec9ff;
+    --header-height:105px;
+    --header-height-mobile:calc(var(--header-height) - 42px);
+    --nav-height:50px
+}
+
+*{
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;
+    line-height: 1.5rem;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif !important;
+    box-sizing: border-box;
+}
+
+.btn{
+    padding:10px 15px;
+    background-color: var(--aqua-color);
+    color: var(--white-color);
+    border-radius: 5px;
+}
