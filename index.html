@@ -1,256 +1,808 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/template_table.dwt" codeOutsideHTMLIsLocked="false" -->
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Siêu thị điện máy</title>
+<!DOCTYPE html>
+<html lang="en">
 
-<style type="text/css">
-.title {
-	font-weight: bold;
-	color: #FFF;
-}
-.menu_item {
-	color: #676d77;
-	text-decoration: none;
-	display: block;
-}
-.box_title {
-	color: #676d77;
-}
-</style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/base.css">
+    <link rel="stylesheet" href="./assets/main.css">
+    <link rel="stylesheet" href="./assets/grid.css">
+    <link rel="stylesheet" href="./assets/responsive.css">
+    <link rel="stylesheet" href="./assets/font/fontawesome-free-5.15.4-web/css/all.css">
+    <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
 </head>
 
 <body>
-<table width="1000" align="center" border="0" cellpadding="0" cellspacing="0">
-	<tr><!-- logo và banner -->
-    	<td background="images/layout/header_bg.jpg">
-        	<table border="0" cellpadding="0" cellspacing="0" width="100%">
-            	<tr>
-                	<td height="173" width="300" align="center" valign="middle">
-                    	<img src="images/layout/logo.png" width="284" height="160" />
-                    </td>
-                    <td width="700" align="center">
-                    	<img src="images/layout/banner.png" width="600" height="173" />
-                    </td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-    <tr><!-- menu -->
-    	<td>
-        	<table width="100%" border="0" cellspacing="0" cellpadding="0" >
-              <tr>
-                <td height="50" width="9" background="images/layout/menu_left.gif"></td>
-                <td width="170" align="center" background="images/layout/menu_bg.gif"><a href="index.html" class="menu_item"><img src="images/layout/home.png" width="16" height="16" /> lab4_vidu1</a></td>
-                <td width="2"><img src="images/layout/menu_divider.gif" width="2" height="50" /></td>
-                <td width="170" align="center" background="images/layout/menu_bg.gif" ><a href="lab4_vidu2.html" class="menu_item"><img src="images/layout/services.png" width="16" height="16" />  lab4_vidu2</a></td>
-                <td width="2"><img src="images/layout/menu_divider.gif" width="2" height="50" /></td>
-                <td width="180" align="center" background="images/layout/menu_bg.gif"><a href="#" class="menu_item"><img src="images/layout/favs.png" width="16" height="16" /> Tin khuyến mãi</a></td>
-                <td width="2"><img src="images/layout/menu_divider.gif" width="2" height="50" /></td>
-                <td width="170" align="center" background="images/layout/menu_bg.gif"><a href="#" class="menu_item"><img src="images/layout/car.png" width="16" height="16" /> Giao hàng</a></td>
-                <td width="2"><img src="images/layout/menu_divider.gif" width="2" height="50" /></td>
-                <td width="170" align="center" background="images/layout/menu_bg.gif"><a href="#" class="menu_item"><img src="images/layout/user_add.png" width="16" height="16" /> Đăng nhập</a></td>
-                <td width="100" background="images/layout/menu_bg.gif"></td>
-                <td width="9" background="images/layout/menu_right.gif"></td>
-              </tr>
-</table>
+    <div class="app">
+        <header class="header">
+            <div class="grid header header__content ">
+                <div class="grid wide">
+                    <ul class="header__content-list ">
+                        <li class="header__content-item">
+                            <a href="" class="header__content--phone">
+                                <i class="fas fa-phone"></i>
+                            </a>
+                        </li>
+                        <li class="header__content-item">
+                            <div onclick="closeMenu()" class="body__cover"></div>
+                            <div onclick="inMenu()" class="header__content--bars">
+                                <i class="fas fa-bars"></i>
+                            </div>
+                            <ul class="header__menu-list">
+                                <li class="header__menu-item">
+                                    <div class="header__menu-close">
+                                        <div onclick="closeMenu()" class="header__menu-link--close">
+                                            <i class="fas fa-times"></i>
+                                        </div>
+                                    </div>
+                                    <div class="header__menu-user">
+                                        <i class="fas fa-user-circle"></i>
+                                    </div>
+                                    <div class="header__menu--account">
+                                        <div class="header__menu--login">
+                                            <a href="" class="header__menu-link">Đăng Nhập</a>
+                                        </div>
+                                        <div class="header__menu-shotbar"></div>
+                                        <div class="header__menu--signUp">
+                                            <a href="" class="header__menu-link">Đăng Ký</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="header__menu-item">
+                                    <a href="" class="header__menu-link">HOME</a>
+                                </li>
+                                <li class="header__menu-item">
+                                    <div onclick="menuShop()" class="header__menu-shop">
+                                        <div class="header__menu-link header__menu-shop--link">SHOP
+                                            <div class="header__menu-icon">
+                                                <i class="fas fa-angle-right"></i>
+                                            </div>
+                                        </div>
+                                        <ul class="header__menu-list2">
+                                            <li class="haeder__menu-item2">
+                                                <a href="" class="header__menu-link2">T-SHIRTS</a>
+                                            </li>
+                                            <li class="haeder__menu-item2">
+                                                <a href="" class="header__menu-link2">SHIRTS</a>
+                                            </li>
+                                            <li class="haeder__menu-item2">
+                                                <a href="" class="header__menu-link2">SWEATERS</a>
+                                            </li>
+                                            <li class="haeder__menu-item2">
+                                                <a href="" class="header__menu-link2">HOODIES</a>
+                                            </li>
+                                            <li class="haeder__menu-item2">
+                                                <a href="" class="header__menu-link2">SHORTS</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="header__menu-item">
+                                    <a href="" class="header__menu-link">BLOG</a>
+                                </li>
+                                <li class="header__menu-item">
+                                    <a href="" class="header__menu-link">CONTACT</a>
+                                </li>
+                                <li class="header__menu-item">
+                                    <a href="" class="header__menu-link">ABOUT</a>
+                                </li>
+                                <li class="header__menu-item">
+                                    <a href="" class="header__menu-link">VERGENCY GROUP</a>
+                                </li>
+                                <li class="header__menu-item">
+                                    <a href="" class="header__menu-link">VERGENCY INTAGRAM</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header__content-item">
+                            <a href="#" class="header__content-logo">
+                                <img src="//theme.hstatic.net/200000305259/1000869166/14/logo.png?v=27" alt="Vergency">
+                            </a>
+                        </li>
+                        <li class="header__content-item">
+                            <ul class="header__content-list2">
+                                <li class="header__content-item2">
+                                    <input type="checkbox" hidden id="header__search-checkbox"
+                                        class="header__content-checkbox">
+                                    <input type="text" class="header__content-input"
+                                        placeholder="Nhập để tìm kiếm sản phẩm">
+                                    <label for="header__search-checkbox" class="header__content-label">
+                                        <div class="header__content-search">
+                                            <i class="fas fa-search"></i>
+                                        </div>
+                                    </label>
+                                </li>
+                                <li class="header__content-item2">
+                                    <a href="" class="header__content-account">
+                                        <i class="fas fa-user-alt"></i>
+                                    </a>
+                                </li>
+                                <li class="header__content-item2">
+                                    <div class="header__content-cart">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <p>0</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div  class="grid header header__navbar">
+                <div class="grid wide ">
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item">
+                            <a href="" class="header__navbar-link">HOME</a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <div class="header__navbar-link">SHOP
+                                <div class="header__navbar-icon">
+                                    <i class="fas fa-angle-down"></i>
+                                </div>
+                                <ul class="header__navbar-list2">
+                                    <li class="haeder__navbar-item2">
+                                        <a href="" class="header__navbar-link2">T-SHIRTS</a>
+                                    </li>
+                                    <li class="haeder__navbar-item2">
+                                        <a href="" class="header__navbar-link2">SHIRTS</a>
+                                    </li>
+                                    <li class="haeder__navbar-item2">
+                                        <a href="" class="header__navbar-link2">SWEATERS</a>
+                                    </li>
+                                    <li class="haeder__navbar-item2">
+                                        <a href="" class="header__navbar-link2">HOODIES</a>
+                                    </li>
+                                    <li class="haeder__navbar-item2">
+                                        <a href="" class="header__navbar-link2">SHORTS</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="" class="header__navbar-link">BLOG</a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="" class="header__navbar-link">CONTACT</a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="" class="header__navbar-link">ABOUT</a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="" class="header__navbar-link">VERGENCY GROUP</a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="" class="header__navbar-link">VERGENCY INTAGRAM</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div class="app__container">
+            <div class="slide">
+                <div class="grid header">
+                    <a href="" class="slide__link">
+                        <div class="slide__img"></div>
+                        <img src="https://theme.hstatic.net/200000305259/1000869166/14/slide_index_1.jpg?v=27"
+                            alt="slide 1" class="slide__img">
+                    </a>
+<!--                     <a href="" class="slide__link">
+                        <img src="https://theme.hstatic.net/200000305259/1000869166/14/slide_index_2_mb.jpg?v=35"
+                            alt="slide 1" class="slide__img">
+                    </a> -->
+                </div>
+            </div>
+            <div class="documents">
+                <div class="grid wide">
+                    <div class="row">
+                        <div class="col l-3 m-6 c-12">
+                            <div class="documents__content">
+                                <div class="documents__content-icon">
+                                    <i class="fas fa-truck-moving"></i>
+                                </div>
+                                <div class="documents__content-document">
+                                    <h4 class="documents__content-title">
+                                        GIAO HÀNG TOÀN QUỐC
+                                    </h4>
+                                    <p class="documents__content-text">
+                                        Vì tình hình dịch covid còn nhạy cảm nên thời gian giao hàng có thể lâu hơn dự
+                                        kiến, mong quý khách hàng cảm thông và cố gắng đợi hàng giúp shop.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-6 c-12">
+                            <div class="documents__content">
+                                <div class="documents__content-icon">
+                                    <i class="fas fa-sync"></i>
+                                </div>
+                                <div class="documents__content-document">
+                                    <h4 class="documents__content-title">
+                                        CHÍNH SÁCH ĐỔI TRẢ HÀNG
+                                    </h4>
+                                    <p class="documents__content-text">
+                                        Sản phẩm được phép đổi hàng trong vòng 36h nếu phát sinh lỗi từ nhà sản xuất
+                                        (Yêu
+                                        cầu: hình ảnh phần bị lỗi rõ nét, chi tiết và đầy đủ).
+                                    </p>
+                                </div>
+                            </div>
 
-        </td>
-    </tr>
-    <tr><!-- dòng trắng -->
-    	<td height="10"></td>
-    </tr>
-    <tr> <!-- Nội dung -->
-    	<td>
-        	<table width="100%" border="0" cellpadding="0" cellspacing="0">
-            	<tr>
-               	  <td width="196" valign="top"><!-- left -->
-                    	<table width="100%" border="0" cellspacing="0" cellpadding="0">
-                              <tr>
-                                <td height="30" align="center" background="images/layout/menu_title_bg.gif" class="title">Loại sản phẩm</td>
-                       	  </tr>
-                              <tr>
-                                <td height="30" valign="middle" bgcolor="#dad0d0"><a href="#" class="menu_item">&nbsp;<img src="images/layout/checked.png" width="16" height="16" />&nbsp;&nbsp;Điện thoại</a></td>
-                              </tr>
-                              <tr>
-                                <td height="1"></td>
-                              </tr>
-                              <tr>
-                                <td height="30" bgcolor="#eee6e6"><a href="#" class="menu_item">&nbsp;<img src="images/layout/checked.png" width="16" height="16" />&nbsp; Máy tính bảng</a></td>
-                              </tr>
-                              <tr>
-                                <td height="1"></td>
-                              </tr>
-                              <tr>
-                                <td height="30" bgcolor="#dad0d0"><a href="#" class="menu_item">&nbsp;<img src="images/layout/checked.png" width="16" height="16" />&nbsp;&nbsp;Laptop</a></td>
-                              </tr>
-                             <tr>
-                                <td height="1"></td>
-                          </tr>
-                              <tr>
-                                <td height="30" bgcolor="#eee6e6"><a href="#" class="menu_item">&nbsp;<img src="images/layout/checked.png" width="16" height="16" />&nbsp;&nbsp;Tivi</a></td>
-                              </tr>
-                              <tr>
-                                <td height="1"></td>
-                              </tr>
-                              <tr>
-                                <td height="30" bgcolor="#dad0d0"><a href="#" class="menu_item">&nbsp;<img src="images/layout/checked.png" width="16" height="16" />&nbsp;&nbsp;Ampli</a></td>
-                              </tr>
-                              <tr>
-                                <td height="1"></td>
-                              </tr>
-                              <tr>
-                                <td height="30" bgcolor="#eee6e6"><a href="#" class="menu_item">&nbsp;<img src="images/layout/checked.png" width="16" height="16" />&nbsp;&nbsp;Loa</a></td>
-                              </tr>
-                      </table>
+                        </div>
+                        <div class="col l-3 m-6 c-12">
+                            <div class="documents__content">
+                                <div class="documents__content-icon">
+                                    <i class="fas fa-hand-holding-usd"></i>
+                                </div>
+                                <div class="documents__content-document">
+                                    <h4 class="documents__content-title">
+                                        GIAO HÀNG NHẬN TIỀN VÀ KIỂM KÊ ĐƠN HÀNG
+                                    </h4>
+                                    <p class="documents__content-text">
+                                        Được phép kiểm hàng trước khi thanh toán. Lưu ý: Trường hợp Quý khách đã nhận
+                                        hàng
+                                        về nhà, vui lòng quay video unbox sản phẩm trong tình trạng nguyên vẹn để có thể
+                                        chứng minh shop giao nhầm hoặc thiếu sản phẩm, trường hợp không có video shop
+                                        không
+                                        thể hỗ trợ.
+                                    </p>
+                                </div>
+                            </div>
 
-                    </td>
-                  <td width="24"></td> <!-- trắng -->
-                    <td width="560" valign="top"><!-- InstanceBeginEditable name="content" -->
-					<form action="" method="post">
-            <table border="0">
-              <tr>
-                <td colspan="3" align="center" style="font-weight: bolder;font-size: large;">ĐĂNG KÍ THÀNH VIÊN</td>
-              </tr>
-              <tr>
-                <td width="30%">Tên đăng nhập</td>
-                <td colspan="2"><input type="text" size="30"></td>
-              </tr>
-              <tr>
-                <td>Mật khẩu</td>
-                <td colspan="2"><input type="password" size="30"></td>
-              </tr>
-              <tr>
-                <td colspan="3"><hr></td>
-              </tr>
-              <tr>
-                <td colspan="3" style="font-weight: bolder;font-size: large;">THÔNG TIN CÁ NHÂN</td>
-              </tr>
-              <tr>
-                <td>Họ tên</td>
-                <td colspan="2"><input type="text" size="50"></td>
-              </tr>
-              <tr>
-                <td>Ngày sinh</td>
-                <td colspan="2"><input type="date" size="20"></td>
-              </tr>
-              <tr>
-                <td>Giới tính</td>
-                <td colspan="2"><input type="radio" name="gt">Nam<br><input type="radio" name="gt">Nữ</td>
-              </tr>
-              <tr>
-                <td>Địa chỉ email</td>
-                <td colspan="2"><input type="text" size="50"></td>
-              </tr>
-              <tr>
-                <td>Hình đại diện</td>
-                <td colspan="2"><input type="file" name="img" ></td>
-              </tr>
-              <tr>
-                <td>Địa chỉ</td>
-                <td colspan="2"><input type="text" size="50"></td>
-              </tr>
-              <tr>
-                <td>Điện thoại</td>
-                <td colspan="2"><input type="text" size="50"></td>
-              </tr>
-              <tr>
-                <td>Câu hỏi bí mật</td>
-                <td colspan="2" >
-                  <input list="browsers" name="" placeholder="Chọn câu hổi bí mật">
-                  <datalist id="browsers">
-                    <option value="Ngôi trường đầu tiên của bạn là gì"></option>
-                    <option value="Con vật bạn yêu thích là gì"></option>
-                    <option value="Quê bạn ở đâu"></option>
-                    <option value="Tên người bạn thân nhất là gì"></option>
-                  </datalist>
-                </td>
-              </tr>
-              <tr>
-                <td>Trả lời</td>
-                <td colspan="2"><input type="text" size="50"></td>
-              </tr>
-              <tr>
-                  <td width="35%">Bạn đang quan tâm đến nhóm sản phẩm nào?</td>
-                  <td width="32.5%">
-                    <input type="checkbox" name="dt">Điện thoại<br>
-                    <input type="checkbox" name="dt">Tablet<br>
-                    <input type="checkbox" name="dt">Vi tính
-                  </td>
-                  <td width="32.5%"><input type="checkbox" name="dt">Máy ảnh-quay phim<br>
-                    <input type="checkbox" name="dt">Điện tử<br>
-                    <input type="checkbox" name="dt">Gia dụng
-                  </td>
-              </tr>
-              <tr align="center" height="60">
-                <td colspan="3"><input type="button" value="Đăng ký">
-                  <input type="button" value="Xóa">
-                </td>
-              </tr>
-            </table>
-          </form>
-					<!-- InstanceEndEditable --><!-- center --></td>
-                    <td width="24"></td> 
-                    <!-- trắng -->
-                  <td width="196" valign="top"><!-- right -->
-                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                              <tr>
-                                <td height="30" align="center" valign="middle" background="images/layout/menu_title_bg.gif" class="title">Hãng sản xuất</td>
-                          	  </tr>
-                              <tr>
-                                <td height="30" bgcolor="#dad0d0"><a href="#" class="menu_item">&nbsp;<img src="images/layout/checked.png" width="16" height="16" />&nbsp;&nbsp;Apple</a></td>
-                              </tr>
-                              <tr>
-                                <td height="1"></td>
-                              </tr>
-                              <tr>
-                                <td height="30" bgcolor="#eee6e6"><a href="#" class="menu_item">&nbsp;<img src="images/layout/checked.png" width="16" height="16" />&nbsp;&nbsp;Nokia</a></td>
-                              </tr>
-                              <tr>
-                                <td height="1"></td>
-                              </tr>
-                              <tr>
-                                <td height="30" bgcolor="#dad0d0"><a href="#" class="menu_item">&nbsp;<img src="images/layout/checked.png" width="16" height="16" />&nbsp;&nbsp;Samsung</a></td>
-                              </tr>
-                             <tr>
-                                <td height="1"></td>
-                              </tr>
-                              <tr>
-                                <td height="30" bgcolor="#eee6e6"><a href="#" class="menu_item">&nbsp;<img src="images/layout/checked.png" width="16" height="16" />&nbsp;&nbsp;LG</a></td>
-                              </tr>
-                              <tr>
-                                <td height="1"></td>
-                              </tr>
-                              <tr>
-                                <td height="30" bgcolor="#dad0d0"><a href="#" class="menu_item">&nbsp;<img src="images/layout/checked.png" width="16" height="16" />&nbsp;&nbsp;Sharp</a></td>
-                              </tr>
-                              <tr>
-                                <td height="1"></td>
-                              </tr>
-                              <tr>
-                                <td height="30" bgcolor="#eee6e6"><a href="#" class="menu_item">&nbsp;<img src="images/layout/checked.png" width="16" height="16" />&nbsp;&nbsp;Toshiba</a></td>
-                              </tr>
-                    </table>
-                    
-                  </td>
-                </tr>
-            </table>
-        
-      </td>
-    </tr>
-    <tr> <!-- trắng -->
-    	<td height="10"></td>
-    </tr>
-    <tr> <!-- footer -->
-    	<td align="center" valign="middle" height="60" background="images/layout/footer_bg.gif">
-        <font color="#847676" size="-3">
-        	Copyright&copy; Siêu thị điện máy H-T<br />
-    Địa chỉ: 180 Cao Lỗ Phường 4 Quận 8 Tp.HCM<br />
-    Điện thoại: 0909123456</font>
-        </td>
-    </tr>
-    
-</table>
+                        </div>
+                        <div class="col l-3 m-6 c-12">
+                            <div class="documents__content">
+                                <div class="documents__content-icon">
+                                    <i class="fas fa-phone-volume"></i>
+                                </div>
+                                <div class="documents__content-document">
+                                    <h4 class="documents__content-title">
+                                        ĐẶT HÀNG ONLINE VÀ KIỂM TRA ĐƠN HÀNG VUI LÒNG LIÊN HỆ
+                                    </h4>
+                                    <p class="documents__content-text">
+                                        Hotline: 0378189209.
+                                    </p>
+                                </div>
+                            </div>
 
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col l-12">
+                            <div class="documents__content-document2">
+                                <h2 class="documents__content-title2">
+                                    CÔNG TY TNHH VERGENCY
+                                </h2>
+                                <p class="documents__content-text2">
+                                    Tạo ra nhiều sản phẩm cao cấp nhưng giá thành hấp dẫn, đem đến điều bất ngờ và những
+                                    trải nghiệm thú vị kèm theo sự hài lòng, niềm tin tuyệt đối cho khách hàng. Đó là sứ
+                                    mệnh của chúng tôi.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid wide">
+                    <div class="document__timess">
+                        <div class="documents__time">
+                            <div class="btn documents__time-hh ">
+                                23
+                            </div>
+                            <p class="documents__time-text">ngày</p>
+                        </div>
+                        <div class="documents__time">
+                            <div class="btn documents__time-hh ">
+                                23
+                            </div>
+                            <p class="documents__time-text">giờ</p>
+                        </div>
+                        <div class="documents__time">
+                            <div class="btn documents__time-hh ">
+                                59
+                            </div>
+                            <p class="documents__time-text">phút</p>
+                        </div>
+                        <div class="documents__time">
+                            <div class="btn documents__time-hh ">
+                                59
+                            </div>
+                            <p class="documents__time-text">giây</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="main-content" class="content">
+                <div class="grid wide">
+                    <div class="row">
+                        <div class="col l-3 m-4 c-6">
+                            <div class="content__product">
+                                <a href="" class="content__product-item">
+                                    <div class="content__product-img">
+                                        <div class="btn content__product-btn">Xem nhanh</div>
+                                    </div>
+                                    <p class="content__product-text">
+                                        NOT BELOW T-SHIRT/MATCHA
+                                    </p>
+                                </a>
+                                <div class="content-product-item2">
+                                    <div class="content__product-text2">
+                                        VERGENCY
+                                    </div>
+                                    <div class="content__product-evaluate">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="content__product-price">
+                                        <div class="content__product-price--item1">89.000&#8363</div>
+                                        <del class="content__product-price--item2">390.000&#8363</del>
+                                    </div>
+                                    <div class="content__product-new">new</div>
+                                    <div class="content__product-sale">-78%</div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col l-3 m-4 c-6">
+                            <div class="content__product">
+                                <a href="" class="content__product-item">
+                                    <div class="content__product-img">
+                                        <div class="btn content__product-btn">Xem nhanh</div>
+
+                                    </div>
+                                    <p class="content__product-text">
+                                        NOT BELOW T-SHIRT/MATCHA
+                                    </p>
+                                </a>
+                                <div class="content-product-item2">
+                                    <div class="content__product-text2">
+                                        VERGENCY
+                                    </div>
+                                    <div class="content__product-evaluate">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="content__product-price">
+                                        <div class="content__product-price--item1">89.000&#8363</div>
+                                        <del class="content__product-price--item2">390.000&#8363</del>
+                                    </div>
+                                    <div class="content__product-new">new</div>
+                                    <div class="content__product-sale">-78%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-4 c-6">
+                            <div class="content__product">
+                                <a href="" class="content__product-item">
+                                    <div class="content__product-img">
+                                        <div class="btn content__product-btn">Xem nhanh</div>
+                                    </div>
+                                    <p class="content__product-text">
+                                        NOT BELOW T-SHIRT/MATCHA
+                                    </p>
+                                </a>
+                                <div class="content-product-item2">
+                                    <div class="content__product-text2">
+                                        VERGENCY
+                                    </div>
+                                    <div class="content__product-evaluate">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="content__product-price">
+                                        <div class="content__product-price--item1">89.000&#8363</div>
+                                        <del class="content__product-price--item2">390.000&#8363</del>
+                                    </div>
+                                    <div class="content__product-new">new</div>
+                                    <div class="content__product-sale">-78%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-4 c-6">
+                            <div class="content__product">
+                                <a href="" class="content__product-item">
+                                    <div class="content__product-img">
+                                        <div class="btn content__product-btn">Xem nhanh</div>
+                                    </div>
+                                    <p class="content__product-text">
+                                        NOT BELOW T-SHIRT/MATCHA
+                                    </p>
+                                </a>
+                                <div class="content-product-item2">
+                                    <div class="content__product-text2">
+                                        VERGENCY
+                                    </div>
+                                    <div class="content__product-evaluate">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="content__product-price">
+                                        <div class="content__product-price--item1">89.000&#8363</div>
+                                        <del class="content__product-price--item2">390.000&#8363</del>
+                                    </div>
+                                    <div class="content__product-new">new</div>
+                                    <div class="content__product-sale">-78%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-4 c-6">
+                            <div class="content__product">
+                                <a href="" class="content__product-item">
+                                    <div class="content__product-img">
+                                        <div class="btn content__product-btn">Xem nhanh</div>
+                                    </div>
+                                    <p class="content__product-text">
+                                        NOT BELOW T-SHIRT/MATCHA
+                                    </p>
+                                </a>
+                                <div class="content-product-item2">
+                                    <div class="content__product-text2">
+                                        VERGENCY
+                                    </div>
+                                    <div class="content__product-evaluate">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="content__product-price">
+                                        <div class="content__product-price--item1">89.000&#8363</div>
+                                        <del class="content__product-price--item2">390.000&#8363</del>
+                                    </div>
+                                    <div class="content__product-new">new</div>
+                                    <div class="content__product-sale">-78%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-4 c-6">
+                            <div class="content__product">
+                                <a href="" class="content__product-item">
+                                    <div class="content__product-img">
+                                        <div class="btn content__product-btn">Xem nhanh</div>
+                                    </div>
+                                    <p class="content__product-text">
+                                        NOT BELOW T-SHIRT/MATCHA
+                                    </p>
+                                </a>
+                                <div class="content-product-item2">
+                                    <div class="content__product-text2">
+                                        VERGENCY
+                                    </div>
+                                    <div class="content__product-evaluate">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="content__product-price">
+                                        <div class="content__product-price--item1">89.000&#8363</div>
+                                        <del class="content__product-price--item2">390.000&#8363</del>
+                                    </div>
+                                    <div class="content__product-new">new</div>
+                                    <div class="content__product-sale">-78%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-4 c-6">
+                            <div class="content__product">
+                                <a href="" class="content__product-item">
+                                    <div class="content__product-img">
+                                        <div class="btn content__product-btn">Xem nhanh</div>
+                                    </div>
+                                    <p class="content__product-text">
+                                        NOT BELOW T-SHIRT/MATCHA
+                                    </p>
+                                </a>
+                                <div class="content-product-item2">
+                                    <div class="content__product-text2">
+                                        VERGENCY
+                                    </div>
+                                    <div class="content__product-evaluate">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="content__product-price">
+                                        <div class="content__product-price--item1">89.000&#8363</div>
+                                        <del class="content__product-price--item2">390.000&#8363</del>
+                                    </div>
+                                    <div class="content__product-new">new</div>
+                                    <div class="content__product-sale">-78%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-4 c-6">
+                            <div class="content__product">
+                                <a href="" class="content__product-item">
+                                    <div class="content__product-img">
+                                        <div class="btn content__product-btn">Xem nhanh</div>
+                                    </div>
+                                    <p class="content__product-text">
+                                        NOT BELOW T-SHIRT/MATCHA
+                                    </p>
+                                </a>
+                                <div class="content-product-item2">
+                                    <div class="content__product-text2">
+                                        VERGENCY
+                                    </div>
+                                    <div class="content__product-evaluate">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="content__product-price">
+                                        <div class="content__product-price--item1">89.000&#8363</div>
+                                        <del class="content__product-price--item2">390.000&#8363</del>
+                                    </div>
+                                    <div class="content__product-new">new</div>
+                                    <div class="content__product-sale">-78%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-4 c-6">
+                            <div class="content__product">
+                                <a href="" class="content__product-item">
+                                    <div class="content__product-img">
+                                        <div class="btn content__product-btn">Xem nhanh</div>
+                                    </div>
+                                    <p class="content__product-text">
+                                        NOT BELOW T-SHIRT/MATCHA
+                                    </p>
+                                </a>
+                                <div class="content-product-item2">
+                                    <div class="content__product-text2">
+                                        VERGENCY
+                                    </div>
+                                    <div class="content__product-evaluate">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="content__product-price">
+                                        <div class="content__product-price--item1">89.000&#8363</div>
+                                        <del class="content__product-price--item2">390.000&#8363</del>
+                                    </div>
+                                    <div class="content__product-new">new</div>
+                                    <div class="content__product-sale">-78%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-4 c-6">
+                            <div class="content__product">
+                                <a href="" class="content__product-item">
+                                    <div class="content__product-img">
+                                        <div class="btn content__product-btn">Xem nhanh</div>
+                                    </div>
+                                    <p class="content__product-text">
+                                        NOT BELOW T-SHIRT/MATCHA
+                                    </p>
+                                </a>
+                                <div class="content-product-item2">
+                                    <div class="content__product-text2">
+                                        VERGENCY
+                                    </div>
+                                    <div class="content__product-evaluate">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="content__product-price">
+                                        <div class="content__product-price--item1">89.000&#8363</div>
+                                        <del class="content__product-price--item2">390.000&#8363</del>
+                                    </div>
+                                    <div class="content__product-new">new</div>
+                                    <div class="content__product-sale">-78%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-4 c-6">
+                            <div class="content__product">
+                                <a href="" class="content__product-item">
+                                    <div class="content__product-img">
+                                        <div class="btn content__product-btn">Xem nhanh</div>
+                                    </div>
+                                    <p class="content__product-text">
+                                        NOT BELOW T-SHIRT/MATCHA
+                                    </p>
+                                </a>
+                                <div class="content-product-item2">
+                                    <div class="content__product-text2">
+                                        VERGENCY
+                                    </div>
+                                    <div class="content__product-evaluate">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="content__product-price">
+                                        <div class="content__product-price--item1">89.000&#8363</div>
+                                        <del class="content__product-price--item2">390.000&#8363</del>
+                                    </div>
+                                    <div class="content__product-new">new</div>
+                                    <div class="content__product-sale">-78%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col l-12 m-12 c-12">
+                            <div class="btn content__btn">
+                                <a href="">XEM TẤT CẢ</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content__foorter">
+                <div class="grid wide">
+                    <div class="row">
+                        <div class="col l-12 m-12 c-12">
+                            <div class="content__foorter-slogan">
+                                <div class="content__foorter-left"></div>
+                                <div class="content__foorter-headding">
+                                    <h1 class="content__foorter-title">
+                                        THƯƠNG HIỆU
+                                    </h1>
+                                    <p class="content__foorter-text">
+                                        Thương hiệu nổi bật của chúng tôi
+                                    </p>
+                                </div>
+                                <div class="content__footer-right"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col m-4 c-12">
+                            <div class="content__logo-imgs">
+                                <a href="" class="content__logo-link">
+                                    <img src="//theme.hstatic.net/200000305259/1000869166/14/partner_1.png?v=27"
+                                        class="content__logo-img">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col m-4 c-12">
+                            <div class="content__logo-imgs">
+                                <a href="" class="content__logo-link">
+                                    <img src="//theme.hstatic.net/200000305259/1000869166/14/partner_3.png?v=27"
+                                        class="content__logo-img">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col m-4 c-12">
+                            <div class="content__logo-imgs">
+                                <a href="" class="content__logo-link">
+                                    <img src="//theme.hstatic.net/200000305259/1000869166/14/partner_2.png?v=27"
+                                        class="content__logo-img">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="foorter">
+            <div class="grid header">
+                <div class="footer__color">
+                    <div class="grid wide">
+                        <div class="row">
+                            <div class="col l-3 m-4 c-6 ">
+                                <div class="foorter__content">
+                                    <h1 class="foorter__content-title">
+                                        THÔNG TIN LIÊN HỆ:
+                                    </h1>
+                                    <div class="foorter__content-documents">
+                                        <p class="foorter__content-text">
+                                            5/15 Tô Hiệu, Tân Thới Hòa, Tân Phú, Hồ Chí Minh (Giờ mở cửa sáng: 08H30 ->
+                                            11H30, Giờ
+                                            nghĩ
+                                            trưa: 11H30 -> 13H30, Giờ mở cửa buổi chiều: 13H30 -> 17H45) KH vui lòng đến
+                                            đúng khung
+                                            giờ
+                                            mở cửa trên để mua hàng.
+                                        </p>
+                                        <p class="foorter__content-text2">
+                                            Phone:03781892909
+                                        </p>
+                                        <p class="footer__content-text3">
+                                            Email:vohavinhtan6@gmail.com
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col l-3 m-4 c-6 ">
+                                <div class="foorter__content">
+                                    <h1 class="foorter__content-title">
+                                        CHÍNH SÁCH HỖ TRỢ:
+                                    </h1>
+                                    <ul class="foorter__content-list">
+                                        <li class="foorter__content-item">
+                                            <a href="" class="foorter__content-link">Tìm kiếm</a>
+                                        </li>
+                                        <li class="foorter__content-item">
+                                            <a href="" class="foorter__content-link">Giới thiệu</a>
+                                        </li>
+                                        <li class="foorter__content-item"><a href="" class="foorter__content-link">Chính
+                                                sách đổi
+                                                trả</a></li>
+                                        <li class="foorter__content-item"><a href="" class="foorter__content-link">Chính
+                                                sách bảo
+                                                mật</a></li>
+                                        <li class="foorter__content-item"><a href="" class="foorter__content-link">Điều
+                                                khoản dịch
+                                                vụ</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col l-3 m-4 c-6 ">
+                                <div class="foorter__content">
+                                    <h1 class="foorter__content-title">
+                                        THÔNG TIN LIÊN KẾT:
+                                    </h1>
+                                    <div class="foorter__content-documents">
+                                        <p class="foorter__content-text">
+                                            Hãy kết nối với chúng tôi.
+                                        </p>
+                                        <div class="foorter__content-icon">
+                                            <div class="foorter__content-facebook">
+                                                <i class="fab fa-facebook-square"></i>
+                                            </div>
+                                            <div class="foorter__content-instagram">
+                                                <i class="fab fa-instagram"></i>
+                                            </div>
+                                        </div>
+                                        <div class="foorter__content-img">
+                                            <img
+                                                src="//theme.hstatic.net/200000305259/1000869166/14/dkbocongthuong.png?v=27">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col l-3 m-4 c-6 ">
+                                <div class="foorter__content">
+                                    <h1 class="foorter__content-title">
+                                        THEO DÕI FANPAGE CHÚNG TÔI ĐỂ CẬP NHẬT XU HƯỚNG THỜI TRANG HOT NHẤT:
+                                    </h1>
+                                    <div class="foorter__content-link--facebook">
+                                        <a href="" class="foorter__content-link--text">Facebook</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-12 m-12">
+                        <div class="foorter__license">
+                            <p class="">&#169;Bản quyền thuộc về tui</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script type="text/javascript" src="./sticky-sidebar-master/src/sticky-sidebar.js"></script>
+    <script type="text/javascript" src="./assets/jav.js"></script>
 </body>
-<!-- InstanceEnd --></html>
+
+</html>
